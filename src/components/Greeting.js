@@ -1,5 +1,6 @@
 import { View, Text } from "react-native";
 import React from "react";
+import PropTypes from "prop-types";
 
 export default function Greeting(props) {
   const { firstName, lastName } = props;
@@ -12,7 +13,12 @@ export default function Greeting(props) {
   );
 }
 
-Greeting.defaultProps = {
-  firstName: "Ammy",
-  lastName: "Fletes",
+// Greeting.defaultProps = {
+//   firstName: "Ammy",
+//   lastName: "Fletes",
+// };
+
+Greeting.propTypes = {
+  firstName: PropTypes.string.isRequired,
+  lastName: PropTypes.string,
 };
